@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>full-width2half-width</title>
+</head>
+<body>
+	<textarea id="code" cols="200" rows="20" onclick="conv()"></textarea>
+	<script type="text/javascript">
+		function conv() {
+			// alert(document.getElementById('code').value);
+			document.getElementById('code').value = document.getElementById('code').value
+			.replace(/（/g,"(")
+			.replace(/）/g,")")
+			.replace(/；/g,";")
+			.replace(/，/g,",")
+			.replace(/％/g,"%")
+			.replace(/［/g,"[")
+			.replace(/］/g,"]")
+			.replace(/‘/g,"'")
+			.replace(/’/g,"'");
+		}
+	</script>
+	<p>我们经常在网上copy下来的代码中，各种标点符号都是全角字符，导致无法直接运行，所以写了一个小脚本，可以转换为半角字符。</p>
+	<footer>https://github.com/cw1997/full-width2half-width</footer>
+</body>
+</html>
