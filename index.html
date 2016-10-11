@@ -8,6 +8,7 @@
 	<textarea id="code" cols="200" rows="20" onblur="conv()"></textarea>
 	<script type="text/javascript">
 		function conv() {
+			console.log(document.getElementById('code').value);
 			// alert(document.getElementById('code').value);
 			document.getElementById('code').value = document.getElementById('code').value
 			.replace(/（/g,"(")
@@ -18,12 +19,12 @@
 			.replace(/［/g,"[")
 			.replace(/］/g,"]")
 			.replace(/‘/g,"'")
-			.replace(/’/g,"'");
-			.replace(/“/g,"\"");
-			.replace(/”/g,"\"");
-			.replace(/＼/g,"\\");
-			.replace(/！/g,"!");
-			.replace(/。/g,".");
+			.replace(/’/g,"'")
+			.replace(/“/g,'"')
+			.replace(/”/g,'"')
+			.replace(/＼/g,'\\')
+			.replace(/！/g,"!")
+			.replace(/。/g,".")
 			.replace(/′/g,"`");
 		}
 	</script>
